@@ -56,8 +56,10 @@ extra_css:
 
 nav:
   - Inicio: index.md
-  - Introducción: unidad1/index.md
   - Unidad 1:
       - Documentación: unidad1/unidad1.md
+      - Debugging: unidad1/debugging.md
+      - Cuestionarios: unidad1/cuestionarios.md
+      - Mapa Conceptual: unidad1/mapa_conceptual.md
   - Ayuda:
       - Markdown y ejemplos interactivos: ayuda/markdown.md

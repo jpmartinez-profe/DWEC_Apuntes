@@ -311,3 +311,14 @@ A[Square Rect] -- Link text --> B((Circle))
 A --> C(Round Rect)
 B --> D{Rhombus}
 C --> D
+
+
+
+
+## Flujo de trabajo con Git:
+
+``javascript
+git add .
+git commit -m "Descripción del cambio"
+git push
+``
