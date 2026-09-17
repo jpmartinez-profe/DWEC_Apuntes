@@ -1,0 +1,328 @@
+/* =========================================================
+   PLAYGROUND
+   ========================================================= */
+
+.playground {
+    margin: 2rem 0;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--md-default-bg-color);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.playground-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    background: var(--md-code-bg-color);
+
+    border-bottom: 1px solid
+        var(--md-default-fg-color--lightest);
+}
+
+.playground-title {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.playground-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.playground button {
+    font-family: inherit;
+}
+
+.playground-run,
+.playground-reset {
+    border: 0;
+    border-radius: 6px;
+
+    padding: 7px 13px;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.1s ease;
+}
+
+.playground-run {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.playground-reset {
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color);
+}
+
+.playground-run:hover,
+.playground-reset:hover {
+    opacity: 0.8;
+}
+
+.playground-run:active,
+.playground-reset:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   PESTAÑAS
+   ========================================================= */
+
+.playground-tabs {
+    display: flex;
+
+    background: var(--md-code-bg-color);
+
+    border-bottom: 1px solid
+        var(--md-default-fg-color--lightest);
+}
+
+.playground-tab {
+    position: relative;
+
+    padding: 10px 18px;
+
+    border: 0;
+    border-bottom: 2px solid transparent;
+
+    background: transparent;
+
+    color: var(--md-default-fg-color--light);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.playground-tab:hover {
+    color: var(--md-default-fg-color);
+}
+
+.playground-tab.active {
+    color: var(--md-primary-fg-color);
+
+    border-bottom-color:
+        var(--md-primary-fg-color);
+}
+
+
+/* =========================================================
+   EDITORES
+   ========================================================= */
+
+.playground-editor {
+    display: block;
+}
+
+.playground-editor.hidden {
+    display: none;
+}
+
+
+/* CodeMirror */
+
+.playground .CodeMirror {
+    height: auto;
+    min-height: 80px;
+    max-height: 500px;
+    font-family: var(--md-code-font-family);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    border: 0;
+}
+
+.playground .CodeMirror-scroll {
+    min-height: 80px;
+    max-height: 500px;
+}
+
+.playground .CodeMirror-focused {
+    outline: none;
+}
+
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.playground-output {
+    padding: 14px 16px;
+
+    border-top: 1px solid
+        var(--md-default-fg-color--lightest);
+}
+
+.playground-output-title {
+    margin-bottom: 10px;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+
+    color:
+        var(--md-default-fg-color--light);
+}
+
+.playground-output iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 20px;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 8px;
+    background: white;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .playground-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .playground-actions {
+        width: 100%;
+    }
+
+    .playground-run,
+    .playground-reset {
+        flex: 1;
+    }
+
+    .playground-tab {
+        flex: 1;
+        padding: 10px 5px;
+    }
+}
+
+/* =========================================================
+   DETALLES DEL EDITOR
+   ========================================================= */
+
+.playground .CodeMirror-gutters {
+    border-right: 1px solid var(--md-default-fg-color--lightest);
+    background: var(--md-code-bg-color);
+}
+
+.playground .CodeMirror-linenumber {
+    color: var(--md-default-fg-color--lighter);
+}
+
+.playground .CodeMirror-cursor {
+    border-left: 2px solid var(--md-primary-fg-color);
+}
+
+.playground .CodeMirror-selected {
+    background: rgba(128, 128, 128, 0.25);
+}
+
+/* Mejor integración con Material */
+
+.playground .CodeMirror {
+    border-radius: 0;
+}
+
+.playground .CodeMirror-lines {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.playground .CodeMirror pre.CodeMirror-line,
+.playground .CodeMirror pre.CodeMirror-line-like {
+    padding-left: 8px;
+}
+
+/* =========================================================
+   CONSOLA DEL PLAYGROUND
+   ========================================================= */
+
+.playground-console {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    background: var(--md-code-bg-color);
+}
+
+.playground-console-title {
+    padding: 9px 16px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--md-default-fg-color--light);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.playground-console-output {
+    min-height: 60px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 12px 16px;
+    font-family: var(--md-code-font-family);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.playground-console-line {
+    padding: 2px 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.playground-console-line.warn {
+    color: #b36b00;
+}
+
+.playground-console-line.error {
+    color: #c62828;
+}
+
+.playground-console-empty {
+    color: var(--md-default-fg-color--lighter);
+    font-style: italic;
+}
+
+/* NÚMEROS DE LÍNEA */
+.playground .CodeMirror-gutters {
+    padding-right: 4px;
+}
+
+.playground .CodeMirror-linenumber {
+    min-width: 28px;
+    padding: 0 4px 0 4px;
+    text-align: center;
+}
