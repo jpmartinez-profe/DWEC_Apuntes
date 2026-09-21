@@ -1,0 +1,1614 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes de Desarrollo Web en Entorno Cliente">
+      
+      
+      
+      
+        <link rel="prev" href="../unidad2/">
+      
+      
+        <link rel="next" href="../../ayuda/markdown/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Cuestionarios - Apuntes DWEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/playground.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-ejercicios-practicos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes DWEC" class="md-header__button md-logo" aria-label="Apuntes DWEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes DWEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cuestionarios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unidad1/unidad1/" class="md-tabs__link">
+          
+  
+  
+  Unidad 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../unidad2/" class="md-tabs__link">
+          
+  
+  
+  Unidad 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ayuda/markdown/" class="md-tabs__link">
+          
+  
+  
+  Ayuda
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes DWEC" class="md-nav__button md-logo" aria-label="Apuntes DWEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes DWEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/unidad1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/cuestionarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cuestionarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/mapa_conceptual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa Conceptual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cuestionarios
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cuestionarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Ampliación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-navegando-por-un-objeto-json-complejo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Ejercicio: Navegando por un objeto JSON complejo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Ejercicio: Navegando por un objeto JSON complejo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Preguntas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ayuda
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ayuda
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ayuda/markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown y ejemplos interactivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enunciado_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enunciado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⭐ Ampliación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicio-navegando-por-un-objeto-json-complejo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Ejercicio: Navegando por un objeto JSON complejo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Ejercicio: Navegando por un objeto JSON complejo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔎 Preguntas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="9-ejercicios-practicos">9. Ejercicios prácticos</h1>
+<p>Los siguientes ejercicios permiten practicar los conceptos fundamentales vistos en la unidad: variables, tipos de datos, operadores, estructuras de control, funciones, strings, arrays y objetos.</p>
+<hr />
+<details class="question">
+<summary>📝 Ejercicio 1: Calculadora básica</summary>
+<h3 id="enunciado">Enunciado</h3>
+<p>Crea un programa que almacene dos números en variables y muestre:</p>
+<ul>
+<li>Su suma.</li>
+<li>Su resta.</li>
+<li>Su multiplicación.</li>
+<li>Su división.</li>
+<li>El resto de la división.</li>
+</ul>
+<p>Utiliza operadores aritméticos.</p>
+<details class="success">
+<summary>💡 Solución</summary>
+<pre class="highlight"><code class="language-javascript">const numero1 = 20;
+const numero2 = 6;
+
+console.log("Suma:", numero1 + numero2);
+console.log("Resta:", numero1 - numero2);
+console.log("Multiplicación:", numero1 * numero2);
+console.log("División:", numero1 / numero2);
+console.log("Resto:", numero1 % numero2);</code></pre>
+</details>
+</details>
+<hr />
+<details class="question">
+<summary>📝 Ejercicio 2: ¿Aprobado o suspenso?</summary>
+<h3 id="enunciado_1">Enunciado</h3>
+<p>Crea una variable <code>nota</code> con un valor entre <code>0</code> y <code>10</code>.</p>
+<p>El programa debe mostrar:</p>
+<ul>
+<li><code>"Suspenso"</code> si la nota es menor que 5.</li>
+<li><code>"Aprobado"</code> si está entre 5 y 6.</li>
+<li><code>"Notable"</code> si está entre 7 y 8.</li>
+<li><code>"Sobresaliente"</code> si es 9 o 10.</li>
+<li><code>"Nota no válida"</code> si el valor no está entre 0 y 10.</li>
+</ul>
+<p><strong>Extra:</strong> muestra también <code>APTO</code> o <code>NO APTO</code> utilizando el operador ternario.</p>
+<details class="success">
+<summary>💡 Solución</summary>
+<pre class="highlight"><code class="language-javascript">const nota = 8;
+
+if (nota &lt; 0 || nota &gt; 10) {
+    console.log("Nota no válida");
+} else if (nota &lt; 5) {
+    console.log("Suspenso");
+} else if (nota &lt; 7) {
+    console.log("Aprobado");
+} else if (nota &lt; 9) {
+    console.log("Notable");
+} else {
+    console.log("Sobresaliente");
+}
+
+const resultado = nota &gt;= 5 ? "APTO" : "NO APTO";
+
+console.log(resultado);</code></pre>
+</details>
+</details>
+<hr />
+<details class="question">
+<summary>📝 Ejercicio 3: Tabla de multiplicar</summary>
+<h3 id="enunciado_2">Enunciado</h3>
+<p>Crea una variable llamada <code>numero</code> y muestra su tabla de multiplicar del 1 al 10.</p>
+<p>Por ejemplo, para:</p>
+<pre class="highlight"><code class="language-javascript">const numero = 7;</code></pre>
+<p>deberá mostrar:</p>
+<pre class="highlight"><code class="language-text">7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+...
+7 x 10 = 70</code></pre>
+<p>Utiliza un bucle <code>for</code>.</p>
+<details class="success">
+<summary>💡 Solución</summary>
+<pre class="highlight"><code class="language-javascript">const numero = 7;
+
+for (let i = 1; i &lt;= 10; i++) {
+    console.log(`${numero} x ${i} = ${numero * i}`);
+}</code></pre>
+</details>
+</details>
+<hr />
+<details class="question">
+<summary>📝 Ejercicio 4: Funciones matemáticas</summary>
+<h3 id="enunciado_3">Enunciado</h3>
+<p>Crea las siguientes funciones:</p>
+<pre class="highlight"><code class="language-javascript">sumar(a, b)
+restar(a, b)
+multiplicar(a, b)
+dividir(a, b)</code></pre>
+<p>Cada función debe recibir dos números y <strong>devolver el resultado</strong> mediante <code>return</code>.</p>
+<p>Después, utiliza las funciones para realizar varias operaciones.</p>
+<p><strong>Extra:</strong> modifica <code>dividir()</code> para controlar el caso en el que se intenta dividir entre <code>0</code>.</p>
+<details class="success">
+<summary>💡 Solución</summary>
+<pre class="highlight"><code class="language-javascript">function sumar(a, b) {
+    return a + b;
+}
+
+function restar(a, b) {
+    return a - b;
+}
+
+function multiplicar(a, b) {
+    return a * b;
+}
+
+function dividir(a, b) {
+    if (b === 0) {
+        return "No se puede dividir entre 0";
+    }
+
+    return a / b;
+}
+
+console.log(sumar(10, 5));
+console.log(restar(10, 5));
+console.log(multiplicar(10, 5));
+console.log(dividir(10, 5));
+console.log(dividir(10, 0));</code></pre>
+</details>
+</details>
+<hr />
+<details class="question">
+<summary>📝 Ejercicio 5: Trabajando con un array</summary>
+<h3 id="enunciado_4">Enunciado</h3>
+<p>Tenemos el siguiente array:</p>
+<pre class="highlight"><code class="language-javascript">const numeros = [4, 7, 2, 9, 5, 10, 3];</code></pre>
+<p>Crea un programa que:</p>
+<ol>
+<li>Muestre todos los números.</li>
+<li>Muestre cuántos números contiene.</li>
+<li>Muestre el primer elemento.</li>
+<li>Muestre el último elemento.</li>
+<li>Compruebe si contiene el número <code>9</code>.</li>
+<li>Calcule la suma de todos sus elementos.</li>
+<li>Muestre únicamente los números pares.</li>
+</ol>
+<p>Para resolverlo deberás utilizar un bucle.</p>
+<details class="success">
+<summary>💡 Solución</summary>
+<pre class="highlight"><code class="language-javascript">const numeros = [4, 7, 2, 9, 5, 10, 3];
+
+// 1. Mostrar todos los números
+for (const numero of numeros) {
+    console.log(numero);
+}
+
+// 2. Número de elementos
+console.log("Cantidad:", numeros.length);
+
+// 3. Primer elemento
+console.log("Primero:", numeros[0]);
+
+// 4. Último elemento
+console.log("Último:", numeros[numeros.length - 1]);
+
+// 5. Comprobar si contiene el número 9
+console.log("¿Contiene el 9?", numeros.includes(9));
+
+// 6. Calcular la suma
+let suma = 0;
+
+for (const numero of numeros) {
+    suma += numero;
+}
+
+console.log("Suma:", suma);
+
+// 7. Mostrar los números pares
+for (const numero of numeros) {
+    if (numero % 2 === 0) {
+        console.log(numero);
+    }
+}</code></pre>
+</details>
+</details>
+<hr />
+<details class="question">
+<summary>📝 Ejercicio 6: Objetos</summary>
+<h3 id="enunciado_5">Enunciado</h3>
+<p>Crea un objeto que represente a un alumno:</p>
+<pre class="highlight"><code class="language-javascript">const alumno = {
+    nombre: "Ana",
+    edad: 20,
+    curso: "2º SMR",
+    notas: [7, 8, 6, 9]
+};</code></pre>
+<p>El programa debe:</p>
+<ol>
+<li>Mostrar el nombre del alumno.</li>
+<li>Mostrar su curso.</li>
+<li>Mostrar todas sus notas.</li>
+<li>Calcular y mostrar la media.</li>
+<li>Indicar si ha aprobado o suspendido.</li>
+<li>Añadir una propiedad <code>email</code>.</li>
+<li>Modificar su edad.</li>
+</ol>
+<details class="success">
+<summary>💡 Solución</summary>
+<pre class="highlight"><code class="language-javascript">const alumno = {
+    nombre: "Ana",
+    edad: 20,
+    curso: "2º SMR",
+    notas: [7, 8, 6, 9]
+};
+
+// 1. Mostrar el nombre
+console.log("Nombre:", alumno.nombre);
+
+// 2. Mostrar el curso
+console.log("Curso:", alumno.curso);
+
+// 3. Mostrar las notas
+console.log("Notas:", alumno.notas);
+
+// 4. Calcular la media
+let suma = 0;
+
+for (const nota of alumno.notas) {
+    suma += nota;
+}
+
+const media = suma / alumno.notas.length;
+
+console.log("Media:", media);
+
+// 5. Indicar si ha aprobado
+if (media &gt;= 5) {
+    console.log("Aprobado");
+} else {
+    console.log("Suspenso");
+}
+
+// 6. Añadir email
+alumno.email = "ana@example.com";
+
+// 7. Modificar la edad
+alumno.edad = 21;
+
+console.log(alumno);</code></pre>
+</details>
+</details>
+<hr />
+<details class="question">
+<summary>📝 Ejercicio 7: Gestión de alumnos</summary>
+<h3 id="enunciado_6">Enunciado</h3>
+<p>Este es el <strong>ejercicio integrador de la unidad</strong>.</p>
+<p>Disponemos de un array de objetos:</p>
+<pre class="highlight"><code class="language-javascript">const alumnos = [
+    {
+        nombre: "Ana",
+        edad: 20,
+        nota: 8
+    },
+    {
+        nombre: "Pedro",
+        edad: 19,
+        nota: 4
+    },
+    {
+        nombre: "Laura",
+        edad: 21,
+        nota: 9
+    },
+    {
+        nombre: "Carlos",
+        edad: 20,
+        nota: 6
+    }
+];</code></pre>
+<p>Crea un programa que recorra el array y muestre para cada alumno:</p>
+<pre class="highlight"><code class="language-text">Ana - 20 años - Notable
+Pedro - 19 años - Suspenso
+Laura - 21 años - Sobresaliente
+Carlos - 20 años - Aprobado</code></pre>
+<p>Para determinar la calificación utiliza una función:</p>
+<pre class="highlight"><code class="language-javascript">obtenerCalificacion(nota)</code></pre>
+<p>que devuelva:</p>
+<ul>
+<li><code>Suspenso</code></li>
+<li><code>Aprobado</code></li>
+<li><code>Notable</code></li>
+<li><code>Sobresaliente</code></li>
+</ul>
+<h3 id="ampliacion">⭐ Ampliación</h3>
+<p>Añade al programa:</p>
+<ul>
+<li>El número total de alumnos.</li>
+<li>El número de aprobados.</li>
+<li>El número de suspensos.</li>
+<li>La nota media de la clase.</li>
+<li>El alumno con mayor nota.</li>
+</ul>
+<details class="success">
+<summary>💡 Solución</summary>
+<p>```javascript
+const alumnos = [
+    {
+        nombre: "Ana",
+        edad: 20,
+        nota: 8
+    },
+    {
+        nombre: "Pedro",
+        edad: 19,
+        nota: 4
+    },
+    {
+        nombre: "Laura",
+        edad: 21,
+        nota: 9
+    },
+    {
+        nombre: "Carlos",
+        edad: 20,
+        nota: 6
+    }</p>
+</details>
+</details>
+<h2 id="ejercicio-navegando-por-un-objeto-json-complejo">📝 Ejercicio: Navegando por un objeto JSON complejo</h2>
+<h3 id="objetivo">🎯 Objetivo</h3>
+<p>A partir del siguiente objeto JavaScript, debes aprender a <strong>navegar por estructuras de datos complejas</strong> utilizando la notación de punto (<code>.</code>) y los índices de los arrays (<code>[]</code>). No es necesario utilizar <code>map()</code>, <code>filter()</code>, <code>reduce()</code> ni otros métodos de arrays.</p>
+<hr />
+<h3 id="datos">📦 Datos</h3>
+<pre class="highlight"><code class="language-javascript">const plataforma = {
+    nombre: "VideoWorld",
+    version: "3.5.2",
+    usuarios: [
+        {
+            id: 1,
+            nombre: "Ana",
+            edad: 28,
+            activo: true,
+            direccion: {
+                ciudad: "Almería",
+                pais: "España",
+                codigoPostal: "04001"
+            },
+            preferencias: {
+                idioma: "es",
+                tema: "oscuro",
+                notificaciones: true
+            },
+            historial: [
+                {
+                    titulo: "Stranger Things",
+                    tipo: "serie",
+                    temporadas: 4,
+                    progreso: 85
+                },
+                {
+                    titulo: "Interestelar",
+                    tipo: "pelicula",
+                    progreso: 100
+                }
+            ]
+        },
+        {
+            id: 2,
+            nombre: "Carlos",
+            edad: 35,
+            activo: false,
+            direccion: {
+                ciudad: "Madrid",
+                pais: "España",
+                codigoPostal: "28001"
+            },
+            preferencias: {
+                idioma: "es",
+                tema: "claro",
+                notificaciones: false
+            },
+            historial: [
+                {
+                    titulo: "The Office",
+                    tipo: "serie",
+                    temporadas: 9,
+                    progreso: 40
+                },
+                {
+                    titulo: "Dune",
+                    tipo: "pelicula",
+                    progreso: 75
+                },
+                {
+                    titulo: "Breaking Bad",
+                    tipo: "serie",
+                    temporadas: 5,
+                    progreso: 100
+                }
+            ]
+        },
+        {
+            id: 3,
+            nombre: "Laura",
+            edad: 22,
+            activo: true,
+            direccion: {
+                ciudad: "Valencia",
+                pais: "España",
+                codigoPostal: "46001"
+            },
+            preferencias: {
+                idioma: "en",
+                tema: "oscuro",
+                notificaciones: true
+            },
+            historial: [
+                {
+                    titulo: "The Last of Us",
+                    tipo: "serie",
+                    temporadas: 1,
+                    progreso: 60
+                },
+                {
+                    titulo: "Avatar",
+                    tipo: "pelicula",
+                    progreso: 100
+                }
+            ]
+        }
+    ]
+};</code></pre>
+<h3 id="preguntas">🔎 Preguntas</h3>
+<p><strong>1.</strong> Obtén el nombre de la plataforma.
+<strong>2.</strong> Obtén el nombre del segundo usuario.
+<strong>3.</strong> Obtén la ciudad del tercer usuario.
+<strong>4.</strong> Obtén el tema de interfaz utilizado por Ana.
+<strong>5.</strong> Obtén el código postal de Carlos.
+<strong>6.</strong> Obtén el título del segundo contenido del historial de Ana.
+<strong>7.</strong> Obtén el número de temporadas de <em>The Office</em>.
+<strong>8.</strong> Obtén el progreso de <em>Dune</em>.
+<strong>9.</strong> Obtén el título del tercer contenido del historial de Carlos.
+<strong>10.</strong> Obtén el progreso del segundo contenido del historial de Laura.
+<strong>11.</strong> Obtén el número de temporadas de <em>Breaking Bad</em>.
+<strong>12.</strong> Obtén el código postal del usuario que está en la posición <code>2</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+      
+        <script src="../../javascripts/playground.js"></script>
+      
+    
+  </body>
+</html>
