@@ -22,7 +22,6 @@ Durante este módulo iremos construyendo poco a poco esas experiencias. **Cada l
 ¡Bienvenidos a DWEC!
 
 
-
 <!-- <p>La planificación y recursos empleados durante el curso 24/25 son:</p>
 <pre class="mermaid"><code>%%{init: { 'theme': 'base' } }%%
 timeline

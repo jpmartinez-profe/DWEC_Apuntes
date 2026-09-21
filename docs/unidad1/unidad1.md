@@ -38,17 +38,17 @@ El navegador recibe los recursos y los procesa.
 ## 1.2. Cliente frente a servidor
 
 Una comparación sencilla:
-| Entorno cliente | Entorno servidor |
-|--|--|
+### Comparación: cliente vs. servidor
+| 💻 **Entorno cliente** | 🖥️ **Entorno servidor** |
+|---|---|
 | Se ejecuta en el navegador | Se ejecuta en la máquina servidor |
 | Está cerca del usuario | Está en la infraestructura del servicio |
 | Interactúa directamente con la interfaz | Gestiona datos y lógica de negocio |
-| HTML, CSS, JavaScript | PHP, Java, Python, C#, Node.js, etc. |
-| Puede manipular el DOM | Puede acceder a bases de datos |
+| **HTML, CSS, JavaScript** | **PHP, Java, Python, C#, Node.js, etc.** |
+| Puede manipular el **DOM** | Puede acceder a **bases de datos** |
 | Tiene acceso limitado al sistema | Tiene acceso a recursos del servidor según permisos |
 | El usuario puede inspeccionar el código | El código normalmente no se envía al cliente |
-| | |
-> **¿Si escribimos una contraseña dentro de un programa JavaScript que se descarga al navegador, ¿podemos considerarla secreta?** >  > La respuesta es No. El usuario puede inspeccionar el código descargado.
+**¿Si escribimos una contraseña dentro de un programa JavaScript que se descarga al navegador, ¿podemos considerarla secreta?** La respuesta es No. El usuario puede inspeccionar el código descargado.
 
 ## 1.3 ¿Qué ocurre cuando cargamos una web?
 
