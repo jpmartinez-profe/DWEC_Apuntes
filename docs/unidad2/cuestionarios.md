@@ -507,14 +507,26 @@ const plataforma = {
 ### 🔎 Preguntas
 
 **1.** Obtén el nombre de la plataforma.
+
 **2.** Obtén el nombre del segundo usuario.
+
 **3.** Obtén la ciudad del tercer usuario.
+
 **4.** Obtén el tema de interfaz utilizado por Ana.
+
 **5.** Obtén el código postal de Carlos.
+
 **6.** Obtén el título del segundo contenido del historial de Ana.
+
 **7.** Obtén el número de temporadas de *The Office*.
+
 **8.** Obtén el progreso de *Dune*.
+
 **9.** Obtén el título del tercer contenido del historial de Carlos.
+
 **10.** Obtén el progreso del segundo contenido del historial de Laura.
+
 **11.** Obtén el número de temporadas de *Breaking Bad*.
+
 **12.** Obtén el código postal del usuario que está en la posición `2`.
+

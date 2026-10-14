@@ -236,9 +236,9 @@ Consejo
 
 
 Información
-!!! note "Información"
+    !!! note "Información"
 
-    Este contenido es importante para comprender el apartado.
+        Este contenido es importante para comprender el apartado.
 
 Importante
 !!! warning "Importante"
