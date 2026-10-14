@@ -29,7 +29,6 @@ Cada vez que se pulse `-`, debe disminuir.
 
 ??? question "📝 Ejercicio 3: Lista dinámica"
 
-````
 Crea:
 
 ```html
@@ -41,11 +40,9 @@ Crea:
 Cada vez que el usuario pulse el botón, el contenido del `input` debe añadirse como un nuevo `<li>`.
 
 Si el campo está vacío, no debe añadirse nada.
-````
 
 ??? question "📝 Ejercicio 4: Mostrar información"
 
-````
 Crea un formulario que solicite:
 
 - Nombre
@@ -58,11 +55,9 @@ Hola Ana, tienes 20 años.
 ```
 
 El formulario no debe recargar la página.
-````
 
 ??? question "📝 Ejercicio 5: Lista de alumnos"
 
-````
 Partiendo de:
 
 ```javascript
@@ -84,7 +79,6 @@ Pedro - 6
 ```
 
 Los elementos deben crearse mediante JavaScript utilizando `createElement()` y `append()`.
-````
 
 ??? question "📝 Ejercicio 6: Lista de tareas"
 
@@ -100,9 +94,8 @@ Crea una pequeña aplicación que permita:
 Utiliza `querySelector()`, `createElement()`, `append()`, `addEventListener()` y `remove()`.
 ```
 
-??? success "🎯 Reto final"
+??? success "🎯 Ejercicio 7: Reto final"
 
-````
 Crea una aplicación de gestión de alumnos.
 
 Debes partir de:
@@ -125,4 +118,4 @@ La página debe:
 - No permitir notas fuera del rango `0-10`.
 
 En este ejercicio se combinarán **arrays, objetos, funciones, DOM, formularios y eventos**.
-````
+
