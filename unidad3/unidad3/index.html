@@ -1,0 +1,2287 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes de Desarrollo Web en Entorno Cliente">
+      
+      
+      
+      
+        <link rel="prev" href="../../unidad2/cuestionarios/">
+      
+      
+        <link rel="next" href="../ejercicios3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Documentación - Apuntes DWEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/playground.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ud3-utilizacion-del-modelo-de-objetos-del-documento-dom" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes DWEC" class="md-header__button md-logo" aria-label="Apuntes DWEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes DWEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unidad1/unidad1/" class="md-tabs__link">
+          
+  
+  
+  Unidad 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unidad2/unidad2/" class="md-tabs__link">
+          
+  
+  
+  Unidad 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Unidad 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unidad4/unidad4/" class="md-tabs__link">
+          
+  
+  
+  Unidad 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ayuda/markdown/" class="md-tabs__link">
+          
+  
+  
+  Ayuda
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes DWEC" class="md-nav__button md-logo" aria-label="Apuntes DWEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes DWEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/unidad1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/cuestionarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cuestionarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/mapa_conceptual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa Conceptual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad2/unidad2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad2/cuestionarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cuestionarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué es el DOM?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-el-objeto-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. El objeto document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-seleccionar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Seleccionar elementos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Seleccionar elementos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-metodos-clasicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Métodos clásicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-selectores-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Selectores CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Selectores CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-queryselector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 querySelector()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-queryselectorall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 querySelectorAll()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modificar-elementos-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modificar elementos del DOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Modificar elementos del DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-propiedades-y-metodos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Propiedades y métodos principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-modificar-contenido-textcontent-e-innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Modificar contenido: textContent e innerHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-modificar-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Modificar clases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-modificar-estilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Modificar estilos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crear-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Crear elementos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-eliminar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Eliminar elementos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Eventos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-el-objeto-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. El objeto event
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-eventos-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Eventos habituales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Formularios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Formularios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-preventdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. preventDefault()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-ejemplo-completo-de-formulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Ejemplo completo de formulario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ejercicios3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad4/unidad4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ayuda
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ayuda
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ayuda/markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown y ejemplos interactivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Qué es el DOM?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-el-objeto-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. El objeto document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-seleccionar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Seleccionar elementos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Seleccionar elementos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-metodos-clasicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Métodos clásicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-selectores-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Selectores CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2. Selectores CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-queryselector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 querySelector()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-queryselectorall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 querySelectorAll()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-modificar-elementos-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Modificar elementos del DOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Modificar elementos del DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-propiedades-y-metodos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Propiedades y métodos principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-modificar-contenido-textcontent-e-innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Modificar contenido: textContent e innerHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-modificar-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Modificar clases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-modificar-estilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Modificar estilos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crear-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Crear elementos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-eliminar-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Eliminar elementos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Eventos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-el-objeto-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1. El objeto event
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-eventos-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Eventos habituales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Formularios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Formularios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-preventdefault" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1. preventDefault()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-ejemplo-completo-de-formulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2. Ejemplo completo de formulario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ud3-utilizacion-del-modelo-de-objetos-del-documento-dom">UD3. Utilización del modelo de objetos del documento (DOM)</h1>
+<p>Hasta ahora hemos trabajado con JavaScript de forma independiente. A partir de ahora vamos a utilizar JavaScript para <strong>interactuar con las páginas web</strong>.
+Para ello utilizaremos el <strong>DOM (Document Object Model)</strong>, que permite acceder a los elementos HTML desde JavaScript, modificarlos, crearlos y responder a las acciones del usuario.</p>
+<p><img alt="Operaciones DOM" src="../../images/ud3_operaciones_dom.png" /></p>
+<hr />
+<h2 id="1-que-es-el-dom">1. ¿Qué es el DOM?</h2>
+<p>Cuando el navegador carga una página HTML, no se limita a mostrarla. Construye una representación de la página en forma de <strong>árbol de objetos</strong>.</p>
+<p>Este árbol se denomina <strong>DOM (Document Object Model)</strong>.</p>
+<p>Por ejemplo, dado este HTML:</p>
+<pre class="highlight"><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;Mi página&lt;/h1&gt;
+    &lt;p&gt;Hola mundo&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+<p>El navegador crea una estructura similar a:</p>
+<pre class="highlight"><code class="language-text">document
+└── html
+    └── body
+        ├── h1
+        │   └── "Mi página"
+        └── p
+            └── "Hola mundo"</code></pre>
+<p>Cada elemento HTML se convierte en un <strong>objeto</strong> que JavaScript puede consultar y modificar.</p>
+<p>Por eso podemos hacer:</p>
+<pre class="highlight"><code class="language-text">document.querySelector("h1").textContent = "Hola JavaScript";</code></pre>
+<p>El navegador modificará el contenido del <code>&lt;h1&gt;</code>.</p>
+<hr />
+<h2 id="2-el-objeto-document">2. El objeto <code>document</code></h2>
+<p>El objeto <code>document</code> representa el <strong>documento HTML actual</strong>.</p>
+<p>A través de él podemos acceder a los elementos de la página.</p>
+<p>Por ejemplo:</p>
+<pre class="highlight"><code class="language-javascript">console.log(document);</code></pre>
+<p>El objeto <code>document</code> será nuestra principal puerta de entrada al DOM.</p>
+<hr />
+<h2 id="3-seleccionar-elementos">3. Seleccionar elementos</h2>
+<p>Antes de modificar un elemento necesitamos <strong>localizarlo</strong>. JavaScript proporciona diferentes métodos para hacerlo.</p>
+<h3 id="31-metodos-clasicos">3.1. Métodos clásicos</h3>
+<p>Antes de modificar un elemento del DOM necesitamos <strong>seleccionarlo</strong>. JavaScript dispone de diferentes métodos para localizar elementos HTML.</p>
+<p>Los métodos clásicos permiten buscar elementos de diferentes formas:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Selecciona...</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getElementById()</code></td>
+<td>Un elemento por su <code>id</code></td>
+<td><code>document.getElementById("titulo")</code></td>
+</tr>
+<tr>
+<td><code>getElementsByTagName()</code></td>
+<td>Elementos por su etiqueta</td>
+<td><code>document.getElementsByTagName("p")</code></td>
+</tr>
+<tr>
+<td><code>getElementsByClassName()</code></td>
+<td>Elementos por su clase</td>
+<td><code>document.getElementsByClassName("destacado")</code></td>
+</tr>
+<tr>
+<td><code>getElementsByName()</code></td>
+<td>Elementos por su atributo <code>name</code></td>
+<td><code>document.getElementsByName("nombre")</code></td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo:
+<pre class="highlight"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Selección de elementos DOM&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1 id="titulo"&gt;Alumnos de DAW&lt;/h1&gt;
+
+    &lt;p class="destacado"&gt;Bienvenidos al curso&lt;/p&gt;
+    &lt;p&gt;Estamos aprendiendo JavaScript&lt;/p&gt;
+    &lt;p class="destacado"&gt;Hoy estudiamos el DOM&lt;/p&gt;
+
+    &lt;nav&gt;
+        &lt;a href="#inicio"&gt;Inicio&lt;/a&gt;
+        &lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;input type="text" name="nombre" value="Ana"&gt;
+    &lt;input type="text" name="apellido" value="García"&gt;
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<pre class="highlight"><code class="language-javascript">// Seleccionar por ID
+const titulo = document.getElementById("titulo"); 
+console.log(titulo.textContent); 
+// Seleccionar por etiqueta 
+const parrafos = document.getElementsByTagName("p"); 
+console.log(parrafos.length); 
+// Seleccionar por clase 
+const destacados = document.getElementsByClassName("destacado"); 
+console.log(destacados.length); 
+// Seleccionar por atributo name 
+const nombres = document.getElementsByName("nombre"); 
+console.log(nombres[0].value); </code></pre></p>
+<p>Estos métodos siguen funcionando y es importante conocerlos, pero actualmente utilizaremos principalmente los métodos basados en <strong>selectores CSS</strong>.</p>
+<hr />
+<h3 id="32-selectores-css">3.2. Selectores CSS</h3>
+<h4 id="321-queryselector">3.2.1 <code>querySelector()</code></h4>
+<p>Permite seleccionar el <strong>primer elemento</strong> que coincida con un selector CSS.</p>
+<pre class="highlight"><code class="language-javascript">const titulo = document.querySelector("#titulo");
+const parrafo = document.querySelector("p");
+const destacado = document.querySelector(".destacado");</code></pre>
+<p>Podemos utilizar prácticamente cualquier selector CSS:</p>
+<p><pre class="highlight"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Selección de elementos DOM&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1 id="titulo"&gt;Alumnos de DAW&lt;/h1&gt;
+
+    &lt;p class="destacado"&gt;Bienvenidos al curso&lt;/p&gt;
+    &lt;p&gt;Estamos aprendiendo JavaScript&lt;/p&gt;
+    &lt;p class="destacado"&gt;Hoy estudiamos el DOM&lt;/p&gt;
+
+    &lt;nav&gt;
+        &lt;a href="#inicio"&gt;Inicio&lt;/a&gt;
+        &lt;a href="#contacto"&gt;Contacto&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;input type="text" name="nombre" value="Ana"&gt;
+    &lt;input type="text" name="apellido" value="García"&gt;
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<pre class="highlight"><code class="language-javascript">document.querySelector("#titulo");        // ID
+document.querySelector(".destacado");     // Clase
+document.querySelector("p");              // Etiqueta
+document.querySelector("div p");          // Descendiente
+document.querySelector("input[type='text']"); // Atributo</code></pre></p>
+<hr />
+<h4 id="322-queryselectorall">3.2.2 <code>querySelectorAll()</code></h4>
+<p>Funciona como <code>querySelector()</code>, pero devuelve <strong>todos los elementos</strong> que coincidan con el selector.</p>
+<pre class="highlight"><code>const parrafos = document.querySelectorAll("p");</code></pre>
+<p>Podemos recorrer los elementos obtenidos:</p>
+<pre class="highlight"><code>parrafos.forEach(parrafo =&gt; {
+    console.log(parrafo.textContent);
+});</code></pre>
+<p>También podemos utilizar selectores CSS más complejos:</p>
+<pre class="highlight"><code>const destacados = document.querySelectorAll(".destacado");
+const enlaces = document.querySelectorAll("nav a");
+const inputs = document.querySelectorAll("input[type='text']"); //Atributo</code></pre>
+<hr />
+<h2 id="4-modificar-elementos-del-dom">4. Modificar elementos del DOM</h2>
+<p>Una vez que hemos seleccionado un elemento, podemos <strong>modificar su contenido, atributos, clases y estilos</strong>.</p>
+<p>Por ejemplo:</p>
+<pre class="highlight"><code>const titulo = document.querySelector("#titulo");</code></pre>
+<p>A partir de ese momento podemos trabajar directamente con el elemento almacenado en <code>titulo</code>.</p>
+<h3 id="41-propiedades-y-metodos-principales">4.1. Propiedades y métodos principales</h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad / método</th>
+<th>¿Para qué sirve?</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>textContent</code></td>
+<td>Cambiar el texto</td>
+<td><code>elemento.textContent = "Hola"</code></td>
+</tr>
+<tr>
+<td><code>innerHTML</code></td>
+<td>Cambiar el contenido HTML</td>
+<td><code>elemento.innerHTML = "&lt;strong&gt;Hola&lt;/strong&gt;"</code></td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td>Obtener o cambiar el valor de un formulario</td>
+<td><code>input.value = "Ana"</code></td>
+</tr>
+<tr>
+<td><code>setAttribute()</code></td>
+<td>Crear o modificar un atributo</td>
+<td><code>img.setAttribute("src", "foto.jpg")</code></td>
+</tr>
+<tr>
+<td><code>getAttribute()</code></td>
+<td>Obtener el valor de un atributo</td>
+<td><code>img.getAttribute("src")</code></td>
+</tr>
+<tr>
+<td><code>removeAttribute()</code></td>
+<td>Eliminar un atributo</td>
+<td><code>img.removeAttribute("alt")</code></td>
+</tr>
+<tr>
+<td><code>classList.add()</code></td>
+<td>Añadir una clase CSS</td>
+<td><code>elemento.classList.add("activo")</code></td>
+</tr>
+<tr>
+<td><code>classList.remove()</code></td>
+<td>Eliminar una clase CSS</td>
+<td><code>elemento.classList.remove("activo")</code></td>
+</tr>
+<tr>
+<td><code>classList.toggle()</code></td>
+<td>Añadir o eliminar una clase</td>
+<td><code>elemento.classList.toggle("activo")</code></td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>Modificar estilos directamente</td>
+<td><code>elemento.style.color = "red"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="ejemplo-completo">Ejemplo completo</h3>
+<p><pre class="highlight"><code class="language-html">&lt;h1 id="titulo"&gt;Título original&lt;/h1&gt;
+
+&lt;p id="mensaje"&gt;Texto original&lt;/p&gt;
+
+&lt;img id="imagen" src="foto1.jpg" alt="Imagen"&gt;
+
+&lt;input id="nombre" type="text" value=""&gt;
+
+&lt;button id="boton"&gt;Modificar&lt;/button&gt;</code></pre>
+<pre class="highlight"><code class="language-javascript">const titulo = document.querySelector("#titulo");
+const mensaje = document.querySelector("#mensaje");
+const imagen = document.querySelector("#imagen");
+const nombre = document.querySelector("#nombre");
+
+// Cambiar texto
+titulo.textContent = "Título modificado";
+
+// Cambiar contenido HTML
+mensaje.innerHTML = "&lt;strong&gt;Nuevo mensaje&lt;/strong&gt;";
+
+// Cambiar un atributo
+imagen.setAttribute("src", "foto2.jpg");
+
+// Cambiar el valor de un formulario
+nombre.value = "Ana";
+
+// Modificar una clase
+titulo.classList.add("destacado");
+
+// Modificar un estilo
+titulo.style.color = "red";</code></pre></p>
+<p>De esta forma, JavaScript puede modificar prácticamente cualquier aspecto de los elementos de una página.</p>
+<hr />
+<h3 id="42-modificar-contenido-textcontent-e-innerhtml">4.2. Modificar contenido:  <code>textContent</code> e <code>innerHTML</code></h3>
+<p>Aunque ambos permiten cambiar el contenido de un elemento, <strong>no funcionan exactamente igual</strong>.</p>
+<pre class="highlight"><code class="language-javascript">elemento.textContent = "&lt;strong&gt;Hola&lt;/strong&gt;";</code></pre>
+<p>Muestra literalmente:</p>
+<pre class="highlight"><code class="language-text">&lt;strong&gt;Hola&lt;/strong&gt;</code></pre>
+<p>Mientras que:</p>
+<pre class="highlight"><code class="language-javascript">elemento.innerHTML = "&lt;strong&gt;Hola&lt;/strong&gt;";</code></pre>
+<p>interpreta la etiqueta HTML y muestra:</p>
+<p><strong>Hola</strong></p>
+<p>Por tanto:</p>
+<ul>
+<li><code>textContent</code> → trata el contenido como <strong>texto</strong>.</li>
+<li><code>innerHTML</code> → interpreta el contenido como <strong>HTML</strong>.</li>
+</ul>
+<blockquote>
+<p>⚠️ <code>innerHTML</code> debe utilizarse con precaución cuando el contenido procede de usuarios o de fuentes externas puede permitir la inyección de código malicioso (XSS). Cuando solo necesitamos insertar texto, es más seguro utilizar textContent.</p>
+</blockquote>
+<hr />
+<h3 id="43-modificar-clases">4.3. Modificar clases</h3>
+<p>Para trabajar con las clases CSS podemos utilizar <code>classList</code>:</p>
+<pre class="highlight"><code>const titulo = document.querySelector("#titulo");
+
+titulo.classList.add("destacado");
+
+titulo.classList.remove("destacado");
+
+titulo.classList.toggle("destacado");
+
+console.log(titulo.classList.contains("destacado"));</code></pre>
+<p><code>toggle()</code> resulta especialmente útil para crear elementos interactivos, ya que <strong>añade la clase si no existe y la elimina si ya existe</strong>.</p>
+<hr />
+<h3 id="44-modificar-estilos">4.4. Modificar estilos</h3>
+<p>También podemos cambiar directamente los estilos mediante la propiedad <code>style</code>:</p>
+<pre class="highlight"><code>const titulo = document.querySelector("#titulo");
+
+titulo.style.color = "red";
+titulo.style.fontSize = "40px";
+titulo.style.backgroundColor = "yellow";</code></pre>
+<p>Sin embargo, cuando los cambios de apariencia son más complejos, suele ser preferible trabajar con <strong>clases CSS</strong>:</p>
+<pre class="highlight"><code>titulo.classList.add("destacado");</code></pre>
+<p>en lugar de modificar muchos estilos individualmente.</p>
+<h2 id="5-crear-elementos">5. Crear elementos</h2>
+<p>JavaScript también permite crear nuevos elementos HTML.</p>
+<p>Por ejemplo:</p>
+<pre class="highlight"><code>const parrafo = document.createElement("p");
+
+parrafo.textContent = "Este párrafo ha sido creado con JavaScript";</code></pre>
+<p>En este momento el elemento existe en memoria, pero todavía no aparece en la página.</p>
+<p>Para añadirlo:</p>
+<pre class="highlight"><code>document.body.append(parrafo);</code></pre>
+<p>También podemos añadirlo dentro de otro elemento:</p>
+<pre class="highlight"><code class="language-html">&lt;div id="contenedor"&gt;&lt;/div&gt;</code></pre>
+<pre class="highlight"><code class="language-javascript">const contenedor = document.querySelector("#contenedor");
+
+const parrafo = document.createElement("p");
+
+parrafo.textContent = "Nuevo párrafo";
+
+contenedor.append(parrafo);</code></pre>
+<hr />
+<h2 id="6-eliminar-elementos">6. Eliminar elementos</h2>
+<p>Podemos eliminar un elemento utilizando <code>remove()</code>.</p>
+<pre class="highlight"><code>const parrafo = document.querySelector("p");
+
+parrafo.remove();</code></pre>
+<hr />
+<h2 id="7-eventos">7. Eventos</h2>
+<p>Hasta ahora hemos ejecutado JavaScript directamente, pero una página web debe poder <strong>reaccionar a las acciones del usuario</strong>.</p>
+<p>Un <strong>evento</strong> es algo que sucede en la página:</p>
+<ul>
+<li>El usuario hace clic.</li>
+<li>Escribe en un campo.</li>
+<li>Envía un formulario.</li>
+<li>Pulsa una tecla.</li>
+<li>Mueve el ratón.</li>
+<li>Cambia el valor de un elemento.</li>
+</ul>
+<p>Para reaccionar/capturar estos eventos utilizamos <code>addEventListener()</code>.</p>
+<p><pre class="highlight"><code class="language-html">&lt;button id="boton"&gt;Pulsar&lt;/button&gt;</code></pre>
+<pre class="highlight"><code class="language-javascript">const boton = document.querySelector("#boton");
+
+boton.addEventListener("click", () =&gt; {
+    console.log("Has pulsado el botón");
+});</code></pre></p>
+<p>La función se ejecutará cada vez que se produzca el evento <code>click</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Información</p>
+<p><code>() =&gt; {}</code> fíjate que es lo mismo que una función anónina: <code>function() { }</code>.</p>
+</div>
+<hr />
+<h2 id="71-el-objeto-event">7.1. El objeto <code>event</code></h2>
+<p>Cuando ocurre un evento, JavaScript proporciona información sobre él mediante un objeto.</p>
+<pre class="highlight"><code>boton.addEventListener("click", event =&gt; {
+    console.log(event);
+});</code></pre>
+<p>Por ejemplo, podemos saber qué elemento ha provocado el evento:</p>
+<pre class="highlight"><code>boton.addEventListener("click", event =&gt; {
+    console.log(event.target);
+});</code></pre>
+<p><code>event.target</code> representa el elemento sobre el que se produjo el evento.</p>
+<div class="admonition note">
+<p class="admonition-title">Información</p>
+<p><code>event =&gt; {}</code> fíjate que es lo mismo que una función anónina con un argumento: <code>function(event) { }</code>.</p>
+</div>
+<hr />
+<h2 id="72-eventos-habituales">7.2. Eventos habituales</h2>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Se produce cuando...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>click</code></td>
+<td>Se hace clic</td>
+</tr>
+<tr>
+<td><code>dblclick</code></td>
+<td>Se hace doble clic</td>
+</tr>
+<tr>
+<td><code>input</code></td>
+<td>Cambia el contenido de un campo</td>
+</tr>
+<tr>
+<td><code>change</code></td>
+<td>Cambia el valor de un elemento</td>
+</tr>
+<tr>
+<td><code>submit</code></td>
+<td>Se envía un formulario</td>
+</tr>
+<tr>
+<td><code>keydown</code></td>
+<td>Se pulsa una tecla</td>
+</tr>
+<tr>
+<td><code>keyup</code></td>
+<td>Se suelta una tecla</td>
+</tr>
+<tr>
+<td><code>mouseover</code></td>
+<td>El ratón entra sobre un elemento</td>
+</tr>
+<tr>
+<td><code>mouseout</code></td>
+<td>El ratón sale de un elemento</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo:</p>
+<pre class="highlight"><code>const campo = document.querySelector("#nombre");
+
+campo.addEventListener("input", () =&gt; {
+    console.log(campo.value);
+});</code></pre>
+<p>Cada vez que el usuario escriba, podremos obtener el contenido actual del campo.</p>
+<hr />
+<h2 id="8-formularios">8. Formularios</h2>
+<p>Los eventos permiten controlar los formularios antes de enviarlos.</p>
+<pre class="highlight"><code class="language-html">&lt;form id="formulario"&gt;
+    &lt;input id="nombre" type="text"&gt;
+    &lt;button&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<pre class="highlight"><code class="language-javascript">const formulario = document.querySelector("#formulario");
+
+formulario.addEventListener("submit", event =&gt; {
+
+    event.preventDefault();
+
+    const nombre = document.querySelector("#nombre").value;
+
+    console.log(`Hola ${nombre}`);
+});</code></pre>
+<h3 id="81-preventdefault">8.1. <code>preventDefault()</code></h3>
+<p>Por defecto, un formulario intenta enviarse al servidor.</p>
+<p>Con <code>event.preventDefault();</code> evitamos ese comportamiento.</p>
+<p>Esto nos permite controlar el formulario completamente desde JavaScript.</p>
+<hr />
+<h3 id="82-ejemplo-completo-de-formulario">8.2. Ejemplo completo de formulario</h3>
+<p>Vamos a combinar varias de las técnicas anteriores.</p>
+<p><pre class="highlight"><code class="language-html">&lt;form id="formulario"&gt;
+
+    &lt;h2&gt;Crear cuenta&lt;/h2&gt;
+
+    &lt;label&gt;
+        Nombre:
+        &lt;input type="text" id="nombre"&gt;
+    &lt;/label&gt;
+
+    &lt;label&gt;
+        Email:
+        &lt;input type="email" id="email"&gt;
+    &lt;/label&gt;
+
+    &lt;label&gt;
+        Edad:
+        &lt;input type="number" id="edad"&gt;
+    &lt;/label&gt;
+
+    &lt;label&gt;
+        Contraseña:
+        &lt;input type="password" id="password"&gt;
+    &lt;/label&gt;
+
+    &lt;label&gt;
+        Repetir contraseña:
+        &lt;input type="password" id="password2"&gt;
+    &lt;/label&gt;
+
+    &lt;label&gt;
+        &lt;input type="checkbox" id="condiciones"&gt;
+        Acepto las condiciones
+    &lt;/label&gt;
+
+    &lt;button type="submit"&gt;Registrarse&lt;/button&gt;
+
+    &lt;p id="mensaje"&gt;&lt;/p&gt;
+
+&lt;/form&gt;</code></pre>
+<pre class="highlight"><code class="language-javascript">const formulario = document.querySelector("#formulario");
+
+const nombre = document.querySelector("#nombre");
+const email = document.querySelector("#email");
+const edad = document.querySelector("#edad");
+const password = document.querySelector("#password");
+const password2 = document.querySelector("#password2");
+const condiciones = document.querySelector("#condiciones");
+
+const mensaje = document.querySelector("#mensaje");
+
+formulario.addEventListener("submit", event =&gt; {
+
+    event.preventDefault();
+
+    if (nombre.value.trim() === "") {
+        mensaje.textContent = "Introduce tu nombre.";
+        return;
+    }
+
+    const formatoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!formatoEmail.test(email.value)) {
+        mensaje.textContent = "Introduce un email válido.";
+        return;
+    }
+
+    if (edad.value &lt; 18) {
+        mensaje.textContent = "Debes tener al menos 18 años.";
+        return;
+    }
+
+    if (password.value !== password2.value) {
+        mensaje.textContent = "Las contraseñas no coinciden.";
+        return;
+    }
+
+    if (!condiciones.checked) {
+        mensaje.textContent = "Debes aceptar las condiciones.";
+        return;
+    }
+
+    mensaje.textContent = "Registro realizado correctamente.";
+});</code></pre></p>
+<h2 id="9-resumen">9. Resumen</h2>
+<p>El DOM permite a JavaScript interactuar con los elementos de una página HTML.</p>
+<p>Las operaciones fundamentales son:</p>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Método o propiedad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seleccionar por ID</td>
+<td><code>getElementById()</code></td>
+</tr>
+<tr>
+<td>Seleccionar mediante CSS</td>
+<td><code>querySelector()</code></td>
+</tr>
+<tr>
+<td>Seleccionar varios</td>
+<td><code>querySelectorAll()</code></td>
+</tr>
+<tr>
+<td>Modificar texto</td>
+<td><code>textContent</code></td>
+</tr>
+<tr>
+<td>Modificar HTML</td>
+<td><code>innerHTML</code></td>
+</tr>
+<tr>
+<td>Obtener valor de formulario</td>
+<td><code>value</code></td>
+</tr>
+<tr>
+<td>Modificar atributos</td>
+<td><code>setAttribute()</code></td>
+</tr>
+<tr>
+<td>Consultar atributos</td>
+<td><code>getAttribute()</code></td>
+</tr>
+<tr>
+<td>Trabajar con clases</td>
+<td><code>classList</code></td>
+</tr>
+<tr>
+<td>Crear elementos</td>
+<td><code>createElement()</code></td>
+</tr>
+<tr>
+<td>Añadir elementos</td>
+<td><code>append()</code></td>
+</tr>
+<tr>
+<td>Eliminar elementos</td>
+<td><code>remove()</code></td>
+</tr>
+<tr>
+<td>Escuchar eventos</td>
+<td><code>addEventListener()</code></td>
+</tr>
+<tr>
+<td>Evitar comportamiento por defecto</td>
+<td><code>preventDefault()</code></td>
+</tr>
+</tbody>
+</table>
+<p>La idea fundamental es:</p>
+<pre class="highlight"><code class="language-text">HTML
+ ↓
+DOM
+ ↓
+JavaScript
+ ↓
+Modificar la página
+ ↓
+Responder a las acciones del usuario</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+      
+        <script src="../../javascripts/playground.js"></script>
+      
+    
+  </body>
+</html>

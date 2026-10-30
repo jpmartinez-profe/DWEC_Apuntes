@@ -1,0 +1,356 @@
+/* =========================================================
+   PLAYGROUND
+   ========================================================= */
+
+.playground {
+    margin: 1.25rem 0;
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 9px;
+    overflow: hidden;
+    background: var(--md-default-bg-color);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.playground-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 7px 11px;
+
+    background: var(--md-code-bg-color);
+
+    border-bottom: 1px solid
+        var(--md-default-fg-color--lightest);
+}
+
+.playground-title {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.playground-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.playground button {
+    font-family: inherit;
+}
+
+.playground-run,
+.playground-reset {
+    border: 0;
+    border-radius: 5px;
+
+    padding: 5px 9px;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.1s ease;
+}
+
+.playground-run {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+
+.playground-reset {
+    background: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color);
+}
+
+.playground-run:hover,
+.playground-reset:hover {
+    opacity: 0.8;
+}
+
+.playground-run:active,
+.playground-reset:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   PESTAÑAS
+   ========================================================= */
+
+.playground-tabs {
+    display: flex;
+
+    background: var(--md-code-bg-color);
+
+    border-bottom: 1px solid
+        var(--md-default-fg-color--lightest);
+}
+
+.playground-tab {
+    position: relative;
+
+    padding: 7px 13px;
+
+    border: 0;
+    border-bottom: 2px solid transparent;
+
+    background: transparent;
+
+    color: var(--md-default-fg-color--light);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.playground-tab:hover {
+    color: var(--md-default-fg-color);
+}
+
+.playground-tab.active {
+    color: var(--md-primary-fg-color);
+
+    border-bottom-color:
+        var(--md-primary-fg-color);
+}
+
+
+/* =========================================================
+   EDITORES
+   ========================================================= */
+
+.playground-editor {
+    display: block;
+}
+
+.playground-editor.hidden {
+    display: none;
+}
+
+
+/* =========================================================
+   CODEMIRROR
+   ========================================================= */
+
+.playground .CodeMirror {
+    height: auto;
+    min-height: 60px;
+    max-height: 400px;
+
+    font-family: var(--md-code-font-family);
+    font-size: 0.78rem;
+    line-height: 1.4;
+
+    border: 0;
+    border-radius: 0;
+}
+
+.playground .CodeMirror-scroll {
+    min-height: 60px;
+    max-height: 400px;
+}
+
+.playground .CodeMirror-focused {
+    outline: none;
+}
+
+.playground .CodeMirror-lines {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.playground .CodeMirror pre.CodeMirror-line,
+.playground .CodeMirror pre.CodeMirror-line-like {
+    padding-left: 6px;
+}
+
+
+/* =========================================================
+   DETALLES DEL EDITOR
+   ========================================================= */
+
+.playground .CodeMirror-gutters {
+    padding-right: 2px;
+
+    border-right: 1px solid
+        var(--md-default-fg-color--lightest);
+
+    background: var(--md-code-bg-color);
+}
+
+.playground .CodeMirror-linenumber {
+    min-width: 22px;
+    padding: 0 3px;
+
+    text-align: center;
+
+    color: var(--md-default-fg-color--lighter);
+
+    font-size: 0.7rem;
+}
+
+.playground .CodeMirror-cursor {
+    border-left: 2px solid
+        var(--md-primary-fg-color);
+}
+
+.playground .CodeMirror-selected {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.playground-output {
+    padding: 9px 11px;
+
+    border-top: 1px solid
+        var(--md-default-fg-color--lightest);
+}
+
+.playground-output-title {
+    margin-bottom: 6px;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+
+    color:
+        var(--md-default-fg-color--light);
+}
+
+.playground-output iframe {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    min-height: 20px;
+
+    border: 1px solid
+        var(--md-default-fg-color--lightest);
+
+    border-radius: 6px;
+
+    background: white;
+}
+
+
+/* =========================================================
+   CONSOLA DEL PLAYGROUND
+   ========================================================= */
+
+.playground-console {
+    border-top: 1px solid
+        var(--md-default-fg-color--lightest);
+
+    background: var(--md-code-bg-color);
+}
+
+.playground-console-title {
+    padding: 6px 11px;
+
+    font-size: 0.65rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    color:
+        var(--md-default-fg-color--light);
+
+    border-bottom: 1px solid
+        var(--md-default-fg-color--lightest);
+}
+
+.playground-console-output {
+    min-height: 42px;
+    max-height: 180px;
+
+    overflow-y: auto;
+
+    padding: 7px 11px;
+
+    font-family: var(--md-code-font-family);
+    font-size: 0.75rem;
+    line-height: 1.4;
+}
+
+.playground-console-line {
+    padding: 1px 0;
+
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.playground-console-line.warn {
+    color: #b36b00;
+}
+
+.playground-console-line.error {
+    color: #c62828;
+}
+
+.playground-console-empty {
+    color: var(--md-default-fg-color--lighter);
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .playground {
+        margin: 1rem 0;
+        border-radius: 7px;
+    }
+
+    .playground-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 7px;
+    }
+
+    .playground-actions {
+        width: 100%;
+    }
+
+    .playground-run,
+    .playground-reset {
+        flex: 1;
+    }
+
+    .playground-tab {
+        flex: 1;
+        padding: 7px 5px;
+    }
+
+    .playground .CodeMirror {
+        font-size: 0.75rem;
+    }
+}
