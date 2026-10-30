@@ -1,4 +1,4 @@
-# UD2 Introducción al lenguaje JavaScript
+# UD2. Introducción al lenguaje JavaScript
 
 ## 1. Sintaxis Básica
 

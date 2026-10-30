@@ -1,4 +1,4 @@
-#  1. Evolución y características de los navegadores web
+#  UD1. Evolución y características de los navegadores web
 
 En los inicios de Internet existían numerosos problemas de compatibilidad entre navegadores (Internet Explorer, Netscape Navigator, Opera) a diferentes niveles, y esto hizo tomar conciencia de la importancia en la adopción de estándares. El **World Wide Web Consortium (WWWC o W3C)** es una organización que se encarga de velar por la implementación de estándares en el ámbito web, haciendo posible que diferentes fabricantes de software se pongan de acuerdo en beneficio del usuario final.
 

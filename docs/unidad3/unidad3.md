@@ -1,4 +1,4 @@
-# UD3 Utilización del modelo de objetos del documento (DOM)
+# UD3. Utilización del modelo de objetos del documento (DOM)
 
 
 Hasta ahora hemos trabajado con JavaScript de forma independiente. A partir de ahora vamos a utilizar JavaScript para **interactuar con las páginas web**.
