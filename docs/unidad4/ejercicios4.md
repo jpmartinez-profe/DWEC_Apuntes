@@ -205,7 +205,7 @@ Número duplicado: 20
 ```
 
 
-??? question "📝 Ejercicio 8: De callbacks a promesas: consulta de un usuario
+??? question "📝 Ejercicio 8: De callbacks a promesas: consulta de un usuario"
 
 A partir del código asíncrono realizado con callbacks, transformalo para que se realice la misma operación y resultado pero con Promesas.
 
@@ -253,7 +253,7 @@ obtenerUsuario(1, (error, usuario) => {
 });
 ```
 
-??? question "📝 Ejercicio 9: De callbacks a promesas: proceso de compra
+??? question "📝 Ejercicio 9: De callbacks a promesas: proceso de compra"
 
 Este es el ejercicio más complejo de todos ya que no solo tienes que convertir código resulto con callbacks a código resuelto con promesas, sino que si te fijas bien, el código original realizado con callbacks es anidado, es decir, una vez se llama a un callback cuando finaliza, se llama a otro, y sucesivamente. Lo mismo debemos implementarlo con promesas y encadenando ".then". 
 
@@ -374,7 +374,7 @@ obtenerUsuario(1, (error, usuario) => {
 
 ## ASYNC/AWAIT
 
-??? question "📝 Ejercicio 10: De promesas a callbacks
+??? question "📝 Ejercicio 10: De promesas a callbacks"
 
 Disponemos de una función llamada obtenerMensaje() que devuelve una promesa que se resuelve después de dos segundos con el mensaje "Hola, alumno".
 
@@ -402,7 +402,7 @@ Debes de realizar las siguientes tareas:
 
 
 
-??? question "📝 Ejercicio 10: Cuenta atrás asíncrona
+??? question "📝 Ejercicio 11: Cuenta atrás asíncrona"
 
 
 Crea una función llamada **esperar(segundos)** que devuelva una promesa que se resuelva después del número de segundos indicado.
@@ -433,7 +433,7 @@ function esperar(segundos) {
 ```
 
 
-??? question "📝 Ejercicio 11: De promesas a callbacks
+??? question "📝 Ejercicio 12: De promesas a callbacks"
 
 Convierta las siguientes líneas de código haciendo uso de **async/await** en vez de **.then/catch**:
 
@@ -460,7 +460,7 @@ loadJson('no-such-user.json') // (3)
 
 ```
 
-??? question "📝 Ejercicio 12: EJERCICIO FINAL
+??? question "📝 Ejercicio 13: EJERCICIO FINAL (Similar a ejercicio de examen)"
 
 Partiendo del siguiente código: 
 
@@ -490,12 +490,12 @@ getPosts();
 createPost({title: "Post3", body: "This is post three"});
 ```
 
-Vamos a resolver el problema que podrá usted observar; el problemilla es que el método “createPost” tarda 2 segundos en ejecutarse, y el “getPosts” tarda un segundo, y da igual el orden en el que llames a los dos métodos que el tercer post que debe mostrarse nunca se muestra. El resultado final debe de ser así:
+Vamos a resolver el problema que podrá usted observar; el problemilla es que el método “createPost” tarda 2 segundos en ejecutarse, y el “getPosts” tarda un segundo, y da igual el orden en el que llames a los dos métodos que el tercer post que debe mostrarse nunca se muestra. 
 
-Ejercicio 12.1:  Busque una solución al problema haciendo uso de callbacks.
-Ejercicio 12.2:  Busque una solución al problema haciendo uso de promises.
-Ejercicio 12.3:  Busque una solución al problema haciendo uso de async/await.
+- **Ejercicio 13.1:**  Busque una solución al problema haciendo uso de callbacks.
+- **Ejercicio 13.2:**  Busque una solución al problema haciendo uso de promises.
+- **Ejercicio 13.3:**  Busque una solución al problema haciendo uso de async/await.
 
-Resultado esperado:
+El resultado final debe de ser así::
 
 ![Resultado Ejercicio Final](../images/ud4_ejercicios4_final.png)
