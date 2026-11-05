@@ -321,8 +321,6 @@ new Promise((resolve, reject) => {
 ![Consumiendo Promesa](../images/ud4_promesas4_chocolatina.png)
 
 
-
-
 ### 3.2 Encadenando Promesas
 
 Uno de los puntos fuertes de las promesas frente a los callbacks es la capacidad de simplificar la encadenación de acciones asíncronas sin tener que anidar. Veamos el siguiente ejemplo:
@@ -354,14 +352,13 @@ new Promise(function(resolve, reject) {
 
 
 
-## 2. Async / Await
-
+## 4. Async / Await
 
 Podemos decir que async/await es la 3ª propuesta de javascript para código asíncrono. Realmente está basado en promesas, y no es más que una sintaxis nueva (una nueva forma de escribir código de promesas) que nació con el próposito de facilitar el "anidamiento" de promesas. En vez de usar tanto .then y .catch cuando se hay que realizar varias tareas asíncronas, veremos que con async/await se queda un código muy "coqueto" y simple. 
 
 El async/await siempre siempre siempre viene asociado a una función asíncrona. Procesamos a explicarla:
 
-### 2.1. Función async/await
+### 4.1. Función async/await
 
 No es más que una función en la que en su cuerpo (body) se van a realizar tareas pesadas sobre las que vamos a aplicar asincronía. La sintaxis es precederlas siempre de la palabra "async".
 
@@ -375,7 +372,7 @@ funcionAsincrona().then(alert); // 1
 
 **IMPORTANTE** Toda función async devuelve una promesa. ¿Qué supone esto? Que cuando la llamemos para usarla debemos de usar .then, .catch y/o .finally.
 
-### 2.2 Await
+### 4.2 Await
 
 **await** es una palabra reservada de JavaScript que permite esperar a que una operación asíncrona termine antes de continuar ejecutando las siguientes instrucciones de una función.
 
@@ -411,7 +408,7 @@ async function probando()
 probando().then(console.log).catch(console.error);
 ```
 
-### 2.2 Manejo de errores
+### 4.3 Manejo de errores
 
 ¿Qué ocurre si la promesa que estamos esperando mediante await se rechaza (reject)?
 
