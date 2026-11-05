@@ -1,0 +1,1661 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes de Desarrollo Web en Entorno Cliente">
+      
+      
+      
+      
+        <link rel="prev" href="../unidad4/">
+      
+      
+        <link rel="next" href="../../ayuda/markdown/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Ejercicios - Apuntes DWEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/playground.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ejercicios-practicos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Apuntes DWEC" class="md-header__button md-logo" aria-label="Apuntes DWEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes DWEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ejercicios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unidad1/unidad1/" class="md-tabs__link">
+          
+  
+  
+  Unidad 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unidad2/unidad2/" class="md-tabs__link">
+          
+  
+  
+  Unidad 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../unidad3/unidad3/" class="md-tabs__link">
+          
+  
+  
+  Unidad 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../unidad4/" class="md-tabs__link">
+          
+  
+  
+  Unidad 4
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ayuda/markdown/" class="md-tabs__link">
+          
+  
+  
+  Ayuda
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Apuntes DWEC" class="md-nav__button md-logo" aria-label="Apuntes DWEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes DWEC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/unidad1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/cuestionarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cuestionarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad1/mapa_conceptual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapa Conceptual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad2/unidad2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad2/cuestionarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cuestionarios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad3/unidad3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unidad3/ejercicios3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidad4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CALLBACKS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promesas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROMESAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASYNC/AWAIT
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ayuda
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ayuda
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ayuda/markdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown y ejemplos interactivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CALLBACKS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promesas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PROMESAS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ASYNC/AWAIT
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<hr />
+<h1 id="ejercicios-practicos">Ejercicios prácticos</h1>
+<h2 id="callbacks">CALLBACKS</h2>
+<details class="question">
+<summary>📝 Ejercicio 1: Simular una consulta a una base de datos</summary>
+</details>
+<p>Implementa una función buscarUsuario que simule la consulta de un usuario en una base de datos. Debes utilizar callbacks para representar una operación que tarda un tiempo indeterminado en completarse.</p>
+<p>La función debe:
+- Recibir un identificador.
+- Recibir un callback.
+- Simular una espera de dos segundos.
+- Devolver los datos del usuario mediante el callback.</p>
+<p>Este es el código inicial del ejercicio:</p>
+<pre class="highlight"><code class="language-javascript">const usuarios = [
+    { id: 1, nombre: "Ana" },
+    { id: 2, nombre: "Luis" },
+    { id: 3, nombre: "Marta" }
+];
+
+function buscarUsuario(id, callback) {
+    // 1. Simular la consulta con setTimeout.
+
+    // 2. Buscar el usuario cuyo id coincida.
+
+    // 3. Invocar el callback con el resultado.
+}
+
+buscarUsuario(2, (usuario) =&gt; {
+    console.log("Usuario encontrado:", usuario);
+});</code></pre>
+<details class="question">
+<summary>📝 Ejercicio 2: Controlando errores en la consulta a una base de datos</summary>
+</details>
+<p>Sobre el ejercicio anterior terminado, debes de implementar una solución que sea capaz de controlar errores cumpliendo los siguientes criterios:</p>
+<ul>
+<li>Añadir un callback de error.</li>
+<li>Buscar un usuario que no exista Mostrar un mensaje cuando la búsqueda no tenga resultados.</li>
+</ul>
+<p>Resumiendo, debes ser capaz de simular diferentes tipos de respuesta, tanto si se encuentra como si no el elmento buscado en la consulta de la base de datos. Para ello debes de modificar el método que se usa como callback, para que este sea capaz de recibir dos argumenots, uno para cuando se produzca algún error, y otro para cuando no y se devuelva un valor solicitado. </p>
+<details class="question">
+<summary>📝 Ejercicio 3: Realizando diversas llamadas</summary>
+</details>
+<p>A partir de una página html simple y de obtener mensajes a través de la consola, vamos a tratar de controlar mediante el uso de “callback”  3 llamadas “anidadas” a una función la cual simulará una llamada a un servidor. Esta simulación será simplemente un “setTimeout()” con X segundos de retraso. La primera llamada tardará 2 segundos en terminar de ejecutarse, la segunda 3 segundos y la tercera llamada 4 segundos.   </p>
+<p><strong>NOTA:</strong> La segunda llamada a la función “pesada” debe esperar a que la primera llamada a dicha función termine. Suponemos que la segunda, depende del resultado de la primera (y así con el resto) (Suponemos). De eso se trata el anidamiento.</p>
+<p>La función “callback” deberá NO ser anónima, y además deberá de tener 2 parámetros: uno para el objeto Error, y otro con el valor que trae desde su llamada (vamos a devolver el tiempo de espera, por ejemplo).</p>
+<pre class="highlight"><code class="language-javascript">function llamadaServidor( numSegundos , callback)
+{
+  setTimeout( function() { console.log(`Llamada al servidor de ${numSegundos} sg.`); }, numSegundos );
+}</code></pre>
+<ul>
+<li>Resultado Final:  La salida del script debe de ir perfecta, sin fallos. Debe de obtener una salida similar a la siguiente:</li>
+</ul>
+<p><img alt="Resultado esperado" src="../../images/ud4_ejercicio3.png" /></p>
+<h2 id="promesas">PROMESAS</h2>
+<details class="question">
+<summary>📝 Ejercicio 4: Básico de creación de promesas</summary>
+</details>
+<p>Crea una promesa que se resuelva correctamente después de 2 segundos. La promesa debe devolver el mensaje:</p>
+<p><em>"¡Hola! La operación ha terminado correctamente."</em></p>
+<p>Consume la promesa utilizando .then() y muestra el mensaje recibido por consola. </p>
+<p>Código inicial:</p>
+<pre class="highlight"><code class="language-javascript">const miPromesa = new Promise((resolve, reject) =&gt; {
+
+    // Completar
+
+});
+
+// Completar consumir la promesa:
+</code></pre>
+<details class="question">
+<summary>📝 Ejercicio 5: Básico de creación de promesas</summary>
+</details>
+<p>Crea una función llamada <strong>comprobarEdad</strong> que reciba una edad y devuelva una promesa.</p>
+<p>La promesa debe comportarse de la siguiente manera:
+- Si la edad es igual o superior a 18, se resuelve con el mensaje "Acceso permitido".
+- Si la edad es inferior a 18, se rechaza con el mensaje "Acceso denegado".
+Consume la promesa utilizando .then() y .catch().</p>
+<p>Ejemplo de cómo debe usarse la promesa:
+<pre class="highlight"><code class="language-javascript">    comprobarEdad(20)
+    .then(resultado =&gt; {
+        console.log(resultado);
+    })
+    .catch(error =&gt; {
+        console.error(error);
+    });</code></pre></p>
+<details class="question">
+<summary>📝 Ejercicio 6: Intermedio de creación de promesas - simulando llamada a servidor</summary>
+</details>
+<p>Implementa una función obtenerUsuario que simule una consulta a un servidor.</p>
+<p>La función debe:
+- Recibir un identificador de usuario.
+- Devolver una promesa.
+- Simular una espera de 2 segundos.
+- Si el identificador es válido (mayor que cero), resolver la promesa con los datos del usuario.
+- Si el identificador no es válido, rechazar la promesa.</p>
+<ul>
+<li>Datos simulados traídos del servidor:
+<pre class="highlight"><code class="language-javascript">{
+    id: 1,
+    nombre: "Ana",
+    email: "ana@ejemplo.com"
+}</code></pre></li>
+</ul>
+<p>Código de partida:
+<pre class="highlight"><code class="language-javascript">function obtenerUsuario(id) {
+
+    return new Promise((resolve, reject) =&gt; {
+
+        setTimeout(() =&gt; {
+
+            // Completar
+
+        }, 2000);
+
+    });
+
+}</code></pre></p>
+<p>Ejemplo de cómo debería poder usarse
+<pre class="highlight"><code class="language-javascript">obtenerUsuario(1)
+    .then(usuario =&gt; {
+        console.log("Usuario recibido:", usuario);
+    })
+    .catch(error =&gt; {
+        console.error(error);
+    })
+    .finally(() =&gt; {
+        console.log("Consulta finalizada");
+    });</code></pre></p>
+<details class="question">
+<summary>📝 Ejercicio 7: Avanzado de creación de promesas - encadenando promesas</summary>
+</details>
+<p>Implementa dos funciones:
+- obtenerNumero(): devuelve una promesa que se resuelve con el número 10 después de un segundo.
+- duplicarNumero(numero): devuelve una promesa que se resuelve con el doble del número recibido después de otro segundo.
+Encadena ambas operaciones para obtener el resultado final.</p>
+<p>Código de partida:
+<pre class="highlight"><code class="language-javascript">function obtenerNumero() {
+
+    return new Promise((resolve) =&gt; {
+
+        setTimeout(() =&gt; {
+            resolve(10);
+        }, 1000);
+
+    });
+
+}
+
+function duplicarNumero(numero) {
+
+    return new Promise((resolve) =&gt; {
+
+        setTimeout(() =&gt; {
+            resolve(numero * 2);
+        }, 1000);
+
+    });
+
+}</code></pre></p>
+<p>Debes de anidar promesas y escribir el código que sea capaz de darnos esta salida:
+<pre class="highlight"><code>Número inicial: 10
+Número duplicado: 20</code></pre></p>
+<details class="question">
+<summary>📝 Ejercicio 8: De callbacks a promesas: consulta de un usuario</summary>
+</details>
+<p>A partir del código asíncrono realizado con callbacks, transformalo para que se realice la misma operación y resultado pero con Promesas.</p>
+<p>Código original con callbacks
+<pre class="highlight"><code class="language-javascript">function obtenerUsuario(id, callback) {
+
+    console.log("Consultando usuario...");
+
+    setTimeout(() =&gt; {
+
+        if (id &gt; 0) {
+
+            const usuario = {
+                id: id,
+                nombre: "Ana",
+                email: "ana@ejemplo.com"
+            };
+
+            callback(null, usuario);
+
+        } else {
+
+            callback("Identificador incorrecto", null);
+
+        }
+
+    }, 2000);
+
+}
+
+
+// Llamada a la función
+
+obtenerUsuario(1, (error, usuario) =&gt; {
+
+    if (error) {
+        console.error("Error:", error);
+        return;
+    }
+
+    console.log("Usuario encontrado:");
+    console.log(usuario);
+
+});</code></pre></p>
+<details class="question">
+<summary>📝 Ejercicio 9: De callbacks a promesas: proceso de compra</summary>
+</details>
+<p>Este es el ejercicio más complejo de todos ya que no solo tienes que convertir código resulto con callbacks a código resuelto con promesas, sino que si te fijas bien, el código original realizado con callbacks es anidado, es decir, una vez se llama a un callback cuando finaliza, se llama a otro, y sucesivamente. Lo mismo debemos implementarlo con promesas y encadenando ".then". </p>
+<p>Ánimo, si consigues realizar este ejercicio estás más que preparado.</p>
+<pre class="highlight"><code>Una tienda online necesita realizar tres operaciones para completar una compra:
+1. Obtener los datos del usuario.
+2. Consultar su carrito de compra.
+3. Procesar el pedido.
+Actualmente, el programa utiliza callbacks para coordinar estas operaciones.
+
+Tu misión consiste en transformar las tres funciones para que devuelvan promesas y reescribir el código principal utilizando el encadenamiento de .then().</code></pre>
+<pre class="highlight"><code class="language-javascript">function obtenerUsuario(id, callback) {
+
+    console.log("Buscando usuario...");
+
+    setTimeout(() =&gt; {
+
+        if (id &gt; 0) {
+
+            callback(null, {
+                id: id,
+                nombre: "Carlos"
+            });
+
+        } else {
+
+            callback("Usuario no encontrado", null);
+
+        }
+
+    }, 1000);
+
+}
+
+
+function obtenerCarrito(usuario, callback) {
+
+    console.log("Consultando carrito...");
+
+    setTimeout(() =&gt; {
+
+        const carrito = {
+            usuario: usuario.nombre,
+            productos: ["Teclado", "Ratón"],
+            total: 50
+        };
+
+        callback(null, carrito);
+
+    }, 1500);
+
+}
+
+
+function procesarPedido(carrito, callback) {
+
+    console.log("Procesando pedido...");
+
+    setTimeout(() =&gt; {
+
+        if (carrito.total &gt; 0) {
+
+            callback(null, {
+                productos: carrito.productos,
+                importe: carrito.total,
+                estado: "Confirmado"
+            });
+
+        } else {
+
+            callback("No se puede procesar el pedido", null);
+
+        }
+
+    }, 2000);
+
+}
+
+
+// PROGRAMA PRINCIPAL
+
+obtenerUsuario(1, (error, usuario) =&gt; {
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    obtenerCarrito(usuario, (error, carrito) =&gt; {
+
+        if (error) {
+            console.error(error);
+            return;
+        }
+
+        procesarPedido(carrito, (error, pedido) =&gt; {
+
+            if (error) {
+                console.error(error);
+                return;
+            }
+
+            console.log("Pedido realizado correctamente:");
+            console.log(pedido);
+
+        });
+
+    });
+
+});</code></pre>
+<h2 id="asyncawait">ASYNC/AWAIT</h2>
+<details class="question">
+<summary>📝 Ejercicio 10: De promesas a callbacks</summary>
+</details>
+<p>Disponemos de una función llamada obtenerMensaje() que devuelve una promesa que se resuelve después de dos segundos con el mensaje "Hola, alumno".</p>
+<p><pre class="highlight"><code class="language-javascript">function obtenerMensaje() {
+
+    return new Promise(resolve =&gt; {
+
+        setTimeout(() =&gt; {
+            resolve("Hola, alumno");
+        }, 2000);
+
+    });
+
+}</code></pre>
+Debes de realizar las siguientes tareas:</p>
+<ol>
+<li>Crea una función asíncrona llamada mostrarMensaje().</li>
+<li>Utiliza await para esperar a que termine la promesa devuelta por obtenerMensaje().</li>
+<li>Guarda el resultado en una variable llamada mensaje.</li>
+<li>Muestra el contenido de mensaje por consola.</li>
+<li>Añade un mensaje al principio y otro al final de la función para comprobar el orden de ejecución.</li>
+</ol>
+<details class="question">
+<summary>📝 Ejercicio 11: Cuenta atrás asíncrona</summary>
+</details>
+<p>Crea una función llamada <strong>esperar(segundos)</strong> que devuelva una promesa que se resuelva después del número de segundos indicado.
+A continuación, crea una función asíncrona llamada <strong>cuentaAtras()</strong> que realice una cuenta atrás desde 5 hasta 1.
+Entre cada número deberá esperar un segundo.</p>
+<p>El resultado debe ser parecido a este:
+<pre class="highlight"><code>5
+4
+3
+2
+1
+¡Despegamos!</code></pre>
+Podrías empezar a realizar el ejercicio usando esta función base:</p>
+<pre class="highlight"><code class="language-javascript">function esperar(segundos) {
+
+    return new Promise(resolve =&gt; {
+
+        setTimeout(() =&gt; {
+            resolve();
+        }, segundos * 1000);
+
+    });</code></pre>
+<details class="question">
+<summary>📝 Ejercicio 12: De promesas a callbacks</summary>
+</details>
+<p>Convierta las siguientes líneas de código haciendo uso de <strong>async/await</strong> en vez de <strong>.then/catch</strong>:</p>
+<ul>
+<li>Para resolver este ejercicio hay que tener en cuenta que el método “fetch” el cual se utiliza para hacer llamadas HTTP a un servidor, e internamente, cuando se finaliza, devuelve una promesa.</li>
+<li>Para probarlo bien, podéis fabricar un archivo  nombre.json con contenido Json y cargarlo desde local. O también podéis llamar a un servidor gratis que sirva información JSON como puede ser “https://httpbin.org/json”.</li>
+<li>Si hubiera algún error en el código, arreglarlo antes de hacer la modificación. </li>
+</ul>
+<pre class="highlight"><code class="language-javascript">
+function loadJson(url) {
+  return fetch(url)
+    .then(response =&gt; {
+    if (response.status == 200) {
+           return response.json();
+    } else {
+           throw new Error(response.status);
+    }
+    })
+}
+
+loadJson('no-such-user.json') // (3)
+  .catch(alert); // Error: 404
+</code></pre>
+<details class="question">
+<summary>📝 Ejercicio 13: EJERCICIO FINAL (Similar a ejercicio de examen)</summary>
+</details>
+<p>Partiendo del siguiente código: </p>
+<pre class="highlight"><code class="language-javascript">const posts = [
+    {title: "Post1", body: "This is post one"},
+    {title: "Post2", body: "This is post two"}
+];
+
+function getPosts(){
+    setTimeout(()=&gt; 
+    {
+        let output =``;
+        posts.forEach( (post, index) =&gt; {
+            output += `&lt;li&gt;${post.title}&lt;/li&gt;`;
+        })
+        document.body.innerHTML = output;
+    }
+    , 1000);
+}
+
+function createPost (newPost) {
+    setTimeout( () =&gt; { posts.push(newPost) } , 2000);
+}
+
+getPosts();
+createPost({title: "Post3", body: "This is post three"});</code></pre>
+<p>Vamos a resolver el problema que podrá usted observar; el problemilla es que el método “createPost” tarda 2 segundos en ejecutarse, y el “getPosts” tarda un segundo, y da igual el orden en el que llames a los dos métodos que el tercer post que debe mostrarse nunca se muestra. </p>
+<ul>
+<li><strong>Ejercicio 13.1:</strong>  Busque una solución al problema haciendo uso de callbacks.</li>
+<li><strong>Ejercicio 13.2:</strong>  Busque una solución al problema haciendo uso de promises.</li>
+<li><strong>Ejercicio 13.3:</strong>  Busque una solución al problema haciendo uso de async/await.</li>
+</ul>
+<p>El resultado final debe de ser así::</p>
+<p><img alt="Resultado Ejercicio Final" src="../../images/ud4_ejercicios4_final.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+      
+        <script src="../../javascripts/playground.js"></script>
+      
+    
+  </body>
+</html>
